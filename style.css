@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  font-family: 'Press Start 2P', sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, rgb(215, 97, 97), rgb(135, 49, 49));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-size: 20px;
+}
+h1 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  margin-top: 28vh;
+  font-size: 40px;
+}
+header {
+  position: relative;
+}
+.btn {
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--color);
+  font-size: 16px;
+  padding: 1.3em 1.2em;
+  border: 0;
+  outline: 0;
+  position: relative;
+  z-index: 1;
+  --color: rgb(215, 97, 97);
+  --background-color: #fff;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: transform 160ms ease-in;
+}
+.again {
+  position: absolute;
+  left: 2vh;
+  top: 2vh;
+}
+.again::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.again:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.again:active {
+  color: rgb(235, 235, 235);
+  background: rgba(230, 230, 230, 0.844);
+}
+.between {
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+}
+
+.guess {
+  background-color: transparent;
+  border: 3px white solid;
+  outline: none;
+  z-index: 1000;
+  color: #fff;
+  width: 240px;
+  height: 120px;
+  font-size: 80px;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.container {
+  position: relative;
+  top: 50vh;
+}
+hr {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  border: 4px solid #fff;
+}
+
+.rectangle {
+  position: absolute;
+  border: solid white 5px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+}
+.number {
+  display: flex;
+  justify-content: center;
+  color: rgb(215, 97, 97);
+  width: 100%;
+  margin: 0 auto;
+  font-size: 80px;
+  position: relative;
+}
+.check {
+  position: absolute;
+  top: 14.5vh;
+  left: 5.6vh;
+}
+.check::after {
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+.check:hover::after {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+.check:active {
+  color: rgb(235, 235, 235);
+  background: rgba(230, 230, 230, 0.844);
+}
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: flex-start;
+  position: absolute;
+  bottom: 10%;
+  left: 18%;
+}
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 22%;
+  right: 18%;
+}
+.message {
+  display: inline-block;
+  position: absolute;
+  bottom: 10vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media all and (max-width: 994px) {
+  .message {
+    display: inline-block;
+    position: absolute;
+    left: -4vh;
+    bottom: 6.8vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 32%;
+    right: 18%;
+  }
+}
+.label-score {
+  position: absolute;
+  right: 25%;
+  bottom: 110%;
+  white-space: nowrap;
+}
+
+@media all and (max-width: 514px) {
+  .again {
+    position: absolute;
+    left: 2vh;
+    top: 6vh;
+  }
+  .label-score {
+    position: absolute;
+    right: 25%;
+    bottom: 110%;
+    white-space: nowrap;
+  }
+}
