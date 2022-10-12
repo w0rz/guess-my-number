@@ -87,6 +87,7 @@ header {
   height: 120px;
   font-size: 80px;
   font-family: 'Press Start 2P', sans-serif;
+  text-align: center;
 }
 
 .container {
@@ -118,6 +119,7 @@ hr {
   width: 100%;
   margin: 0 auto;
   font-size: 80px;
+
   position: relative;
 }
 .check {
